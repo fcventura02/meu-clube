@@ -1,0 +1,19 @@
+{
+  "name": "modulo6",
+  "version": "1.0.0",
+  "description": "Projeto faculdadeIV2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fcventura02/meu-clube.git"
+  },
+  "author": "fcventura02",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fcventura02/meu-clube/issues"
+  },
+  "homepage": "https://github.com/fcventura02/meu-clube#readme"
+}
