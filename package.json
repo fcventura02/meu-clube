@@ -16,7 +16,5 @@
     "url": "https://github.com/fcventura02/meu-clube/issues"
   },
   "homepage": "https://github.com/fcventura02/meu-clube#readme",
-  "dependencies": {
-    "axios": "^0.21.1"
-  }
+  "dependencies": {}
 }
