@@ -1,0 +1,31 @@
+:root{
+	--bg-image: url('https://cdn.pixabay.com/photo/2016/11/29/02/05/audience-1866738_960_720.jpg');
+	--font-family: 'Quicksand', sans-serif;
+	--secondary-color: #3B719F;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--font-family)
+}
+
+.container{
+	max-width: 900px;
+	width: 90%;
+	background-color: rgba(240, 248, 255, 0.479);
+	box-shadow: 1px 1px 15px rgba(34, 34, 34, 0.445);
+	border-radius: 6px;
+}
+
+body{
+	background-image: var(--bg-image);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	backdrop-filter: blur(2px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
