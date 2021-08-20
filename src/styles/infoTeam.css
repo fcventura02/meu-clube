@@ -1,0 +1,62 @@
+
+.container {
+	background-color: #fafafa;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container-team,
+.container-team-stadium,
+.container-team-info,
+.container-team-galery {
+  padding: 10px;
+}
+
+.container-team {
+  display: flex;
+  align-items: center;
+}
+
+.container-team img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+.team-info{
+	width: 100%;
+}
+
+.team-network{
+	display: flex;
+	justify-content: center;
+}
+
+.team-network a img{
+	margin: 5px;
+	width: 40px;
+	height: 40px;
+}
+
+.container-team-stadium{
+	display: flex;
+	flex-direction: column;
+}
+.team-stadium-img img{
+	width: 100%;
+}
+
+.team-galery{
+	overflow: hidden;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+		box-sizing: border-box;
+}
+
+.team-galery img{
+	height: 200px;
+	padding-left: 15px;
+}
+

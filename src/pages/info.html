@@ -10,9 +10,32 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/infoTeam.css" />
     <title>Módulo 6 | informações do time</title>
   </head>
   <body>
-    Hello
+    <header>Header</header>
+    <main class="container">
+      <section class="container-team">
+        <div id="team-logo" class="team-logo"></div>
+        <div id="team-info" class="team-info"></div>
+        <div id="team-network" class="team-network"></div>
+      </section>
+      <section class="container-team-info">
+        <div id="team-description" class="team-description"></div>
+      </section>
+      <section class="container-team-stadium">
+        <div id="team-stadium-info" class="team-stadium-info"></div>
+        <div id="team-stadium-img" class="team-stadium-img"></div>
+      </section>
+      <section class="container-team-galery">
+        <div id="team-galery" class="team-galery"></div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../scripts/components/CardTeam.js"></script>
+    <script type="export" src="../scripts/api.js"></script>
+    <script type="module" src="../scripts/infoTeam.js"></script>
   </body>
 </html>
