@@ -15,7 +15,19 @@
     <title>Módulo 6 | informações do time</title>
   </head>
   <body>
-    <header>Header</header>
+    <header class="header">
+      <div class="header-container">
+        <a class="header-logo" href="./index.html">
+          <img
+            src="https://fontmeme.com/permalink/210820/f6078a1b3f944b2abf81903928a436d9.png"
+            alt="semi-pro-font"
+        /></a>
+        <div class="header-menu">
+          <a href="./index.html">Home</a>
+          <a href="./info.html" id="header-active">Time</a>
+        </div>
+      </div>
+    </header>
     <main class="container">
       <section class="container-team">
         <div id="team-logo" class="team-logo"></div>
@@ -25,16 +37,46 @@
       <section class="container-team-info">
         <div id="team-description" class="team-description"></div>
       </section>
+      <section class="container-team-galery">
+        <div
+          id="team-galery"
+          class="team-galery"
+          data-flickity-options='{ "wrapAround": true }'
+        ></div>
+      </section>
       <section class="container-team-stadium">
         <div id="team-stadium-info" class="team-stadium-info"></div>
         <div id="team-stadium-img" class="team-stadium-img"></div>
       </section>
-      <section class="container-team-galery">
-        <div id="team-galery" class="team-galery"></div>
-      </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+      integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
+      integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+      integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://github.com/makeusabrew/bootbox/releases/download/v4.4.0/bootbox.min.js"></script>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../scripts/components/CardTeam.js"></script>
     <script type="export" src="../scripts/api.js"></script>
     <script type="module" src="../scripts/infoTeam.js"></script>
   </body>

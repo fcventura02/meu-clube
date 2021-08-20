@@ -1,30 +1,76 @@
-:root{
-	--bg-image: url('https://cdn.pixabay.com/photo/2016/11/29/02/05/audience-1866738_960_720.jpg');
-	--font-family: 'Quicksand', sans-serif;
-	--secondary-color: #3B719F;
+:root {
+  --bg-image: url("https://cdn.pixabay.com/photo/2016/11/29/02/05/audience-1866738_960_720.jpg");
+  --bg-color:  #fafafa;
+  --font-family: "Quicksand", sans-serif;
+	--font-color: #000;
+	--font-color-hover: #165706;
+  --secondary-color: #3b719f;
 }
 
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: var(--font-family)
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+	line-height: 1.7rem;
 }
 
-.container{
-	max-width: 900px;
-	width: 90%;
-	background-color: rgba(240, 248, 255, 0.479);
-	box-shadow: 1px 1px 15px rgba(34, 34, 34, 0.445);
-	border-radius: 6px;
-	margin: auto;
+.container {
+  max-width: 900px;
+  width: 90%;
+  background-color: rgba(240, 248, 255, 0.479);
+  box-shadow: 1px 1px 15px rgba(34, 34, 34, 0.445);
+  border-radius: 6px;
+  margin: auto;
 }
 
-body{
-	min-height: 100vh;
-	background-image: var(--bg-image);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	backdrop-filter: blur(2px);
+body {
+  min-height: 100vh;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  backdrop-filter: blur(2px);
+}
+
+header {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--bg-color);
+}
+
+.header-container {
+  margin: auto;
+  width: 90%;
+  max-width: 900px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-container .header-logo img{
+	width: 160px;
+	overflow: auto;
+}
+
+.header-menu{
+	display: flex;
+}
+
+.header-menu a{
+	padding: 8px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: var(--font-color);
+	transition: 0.3s;
+}
+
+.header-menu a:hover, .header-menu a .header-active{
+	color: var(--font-color-hover);
+}
+.header-menu #header-active{
+	color: var(--font-color-hover);
 }
