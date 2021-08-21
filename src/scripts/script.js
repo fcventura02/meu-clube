@@ -3,20 +3,25 @@ import api from "./api.js";
 const formSearch = document.getElementById("formSearch");
 const inputSearch = document.getElementById("searchTeam");
 const containerCards = document.getElementById("container-cards");
-formSearch.addEventListener("submit", async (e) => {
+formSearch.addEventListener("submit", (e) => {
   e.preventDefault();
   const valueSearch = inputSearch.value;
   const typeSearch = inputSearch.getAttribute("name");
-  let reqResp;
   containerCards.innerHTML = "";
   if (typeSearch === "player") {
     //pesquisa jogador
-    reqResp = await apiSearchTeam(`searchplayers.php?p=${valueSearch}`);
-    reqResp.player.map((player) => cardPlayer(player)).join("");
+    search(
+      `searchplayers.php?p=${valueSearch}`,
+      `Não encontramos nenhum atleta chamdo: "${valueSearch}"`,
+      cardPlayer
+    );
   } else {
     //pesquisa Time
-    reqResp = await apiSearchTeam(`searchteams.php?t=${valueSearch}`);
-    reqResp.teams.map((teams) => cardTeam(teams)).join("");
+    search(
+      `searchteams.php?t=${valueSearch}`,
+      `Não encontramos nenhum time chamdo: "${valueSearch}"`,
+      cardTeam
+    );
   }
 });
 
@@ -25,6 +30,16 @@ function apiSearchTeam(str) {
     return response.data;
   });
   return respAxios;
+}
+
+async function search(searchUrl, erroMessage, fn) {
+  const reqResp = await apiSearchTeam(searchUrl);
+  reqResp.player
+    ? reqResp.player.map((player) => fn(player))
+    : (containerCards.innerHTML = `<span></span>
+    <h2>
+      ${erroMessage}
+    </h2>`);
 }
 
 function cardTeam({ strTeamBadge, strTeam, strSport, idTeam, strLeague }) {
@@ -44,7 +59,11 @@ function cardPlayer({ strCutout, strPlayer, strSport, idPlayer, strTeam }) {
   node.setAttribute("href", `../pages/infoPlayer.html?id=${idPlayer}`);
   node.innerHTML = `<card-search 
   team="${strPlayer}"
-  logo="${strCutout ? strCutout : "https://i.pinimg.com/originals/a7/f0/0e/a7f00eaf0b4456c56797db82781e5e6f.png"}"
+  logo="${
+    strCutout
+      ? strCutout
+      : "https://i.pinimg.com/originals/a7/f0/0e/a7f00eaf0b4456c56797db82781e5e6f.png"
+  }"
   sport="${strSport}"
   league="${strTeam}"
   ></card-search>`;
