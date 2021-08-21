@@ -11,6 +11,7 @@ formSearch.addEventListener("submit", (e) => {
   if (typeSearch === "player") {
     //pesquisa jogador
     search(
+      "player",
       `searchplayers.php?p=${valueSearch}`,
       `Não encontramos nenhum atleta chamdo: "${valueSearch}"`,
       cardPlayer
@@ -18,6 +19,7 @@ formSearch.addEventListener("submit", (e) => {
   } else {
     //pesquisa Time
     search(
+      "teams",
       `searchteams.php?t=${valueSearch}`,
       `Não encontramos nenhum time chamdo: "${valueSearch}"`,
       cardTeam
@@ -32,10 +34,11 @@ function apiSearchTeam(str) {
   return respAxios;
 }
 
-async function search(searchUrl, erroMessage, fn) {
+async function search(option, searchUrl, erroMessage, fn) {
   const reqResp = await apiSearchTeam(searchUrl);
-  reqResp.player
-    ? reqResp.player.map((player) => fn(player))
+  console.log(reqResp)
+  reqResp[option]
+    ? reqResp[option].map((player) => fn(player))
     : (containerCards.innerHTML = `<span></span>
     <h2>
       ${erroMessage}
