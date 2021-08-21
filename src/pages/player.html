@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <title>Módulo 6</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <a class="header-logo" href="./index.html">
+          <img
+            src="https://fontmeme.com/permalink/210820/f6078a1b3f944b2abf81903928a436d9.png"
+            alt="semi-pro-font"
+        /></a>
+        <div class="header-menu">
+          <a href="./index.html">Time</a>
+          <a href="./player.html" id="header-active">Player</a>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <section class="container-search">
+        <form id="formSearch">
+          <fieldset>
+            <legend>
+              <label for="searchTeam">Qual atleta você esta procurando?</label>
+            </legend>
+            <input
+              id="searchTeam"
+              name="player"
+              type="text"
+              placeholder="Nome do atleta"
+            />
+            <button class="btn-submit" type="submit">
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"
+              />
+            </button>
+          </fieldset>
+        </form>
+      </section>
+      <section id="container-cards" class="container-cards">
+        <span></span>
+        <h2>
+          Procure Um atleta depois clique em um carde para ver 
+          suas informações!!!
+        </h2>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../scripts/components/CardSearch.js"></script>
+    <script type="export" src="../scripts/api.js"></script>
+    <script type="module" src="../scripts/script.js"></script>
+  </body>
+</html>

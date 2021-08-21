@@ -1,4 +1,4 @@
-class CardTeam extends HTMLElement {
+class CardSearch extends HTMLElement {
   constructor() {
     super();
     this.attributes.length === 0 ? null : this.build();
@@ -67,6 +67,7 @@ class CardTeam extends HTMLElement {
     const style = document.createElement("style");
     style.textContent = `
 			.card{
+				overflow: hidden;
 				height: 100px;
 				display:flex;
 				padding: 10px;
@@ -78,7 +79,7 @@ class CardTeam extends HTMLElement {
 				transition: 0.5s;
 			}
 			.card:hover {
-				outline: 1px solid #fff;
+				outline: 1px solid var(--secondary-color);
 				color: var(--secondary-color);
 			}
 
@@ -106,14 +107,14 @@ class CardTeam extends HTMLElement {
 			}
 		
 			.card::before {
-				border-top: 2px solid #fff;
-				border-bottom: 2px solid #fff;
+				border-top: 2px solid var(--secondary-color);
+				border-bottom: 2px solid var(--secondary-color);
 				transform: scale3d(0,1,1); 
 			}
 		
 			.card::after {
-				border-left: 2px solid #fff;
-				border-right: 2px solid #fff;
+				border-left: 2px solid var(--secondary-color);
+				border-right: 2px solid var(--secondary-color);
 				transform: scale3d(1,0,1);
 			}
 		
@@ -141,4 +142,4 @@ class CardTeam extends HTMLElement {
   }
 }
 
-customElements.define("card-team", CardTeam);
+customElements.define("card-search", CardSearch);
