@@ -128,7 +128,7 @@ function createElementWithSocialNetworks({
   strTwitter && divNetwork.appendChild(createLink(strTwitter, "twitter"));
   if (strFacebook === "" && strInstagram === "" && strTwitter === "") {
     const p = document.createElement("p");
-    p.innerText = "Esse time não possui redes sociais";
+    p.innerText = "Esse atleta não possui redes sociais";
     divNetwork.appendChild(p);
   }
   function createLink(url, classe) {
