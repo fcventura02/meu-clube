@@ -36,7 +36,6 @@ function apiSearchTeam(str) {
 
 async function search(option, searchUrl, erroMessage, fn) {
   const reqResp = await apiSearchTeam(searchUrl);
-  console.log(reqResp)
   reqResp[option]
     ? reqResp[option].map((player) => fn(player))
     : (containerCards.innerHTML = `<span></span>
